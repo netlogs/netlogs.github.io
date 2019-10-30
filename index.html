@@ -145,6 +145,334 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-优先队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/11/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">优先队列</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/11/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="archive-article-date">
+  	<time datetime="2018-10-11T02:38:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="优先队列求最小值"><a href="#优先队列求最小值" class="headerlink" title="优先队列求最小值"></a>优先队列求最小值</h2><p>优先队列 priority_queue 实现可以取最小值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">		<span class="built_in">std</span>::priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, <span class="built_in">std</span>::greater&lt;<span class="keyword">int</span>&gt; &gt; pque; <span class="comment">//写法</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">				pque.push(i);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(!pque.empty())</span><br><span class="line">		&#123;</span><br><span class="line">				<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; pque.top() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">				pque.pop();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/11/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-POJ-2387 Til the Cows Come Home" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/12/POJ-2387%20Til%20the%20Cows%20Come%20Home/">poj-2387 最短路</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/12/POJ-2387%20Til%20the%20Cows%20Come%20Home/" class="archive-article-date">
+  	<time datetime="2018-09-12T12:56:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="最短路问题"><a href="#最短路问题" class="headerlink" title="最短路问题"></a>最短路问题</h2><p>题目大意:<br>有好多相通的路，路都有一定的长度，求1 到 n 的最短距离，单源最短路</p>
+<p><a href="https://vjudge.net/problem/POJ-2387" target="_blank" rel="noopener">https://vjudge.net/problem/POJ-2387</a> 链接</p>
+<p>dijkstra :</p>
+<p>思路就是贪心 从节点1 找 ，如果 节点i 到1 的距离 &gt; 节点1到节点u + 节点u和节点i的距离 ，更新路径权值，这个算法只能计算单元最短路，而且不能计算负权值，<br>path数组储存节点1到各个节点的距离，所以初始化path[1] = 0; 其他的都是INF 然后不断更新<br>比如1到3的最短路就是比较path[3]与path[2]+cost[2][3]，如果大于的话就更新path[3] = path[2]+cost[2][3]，这个专业术语叫松弛，这种算法的核心思想就是通过边来松弛一号顶点到其他定点的路程 </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">NOD</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> from, to, cost;</span><br><span class="line">&#125;es[<span class="number">4040</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> path[<span class="number">1010</span>];</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF = <span class="number">0x3f3f3f3f</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">short_path</span><span class="params">(<span class="keyword">int</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">memset</span>(path, <span class="number">0x3f</span>, <span class="keyword">sizeof</span> path);</span><br><span class="line">	path[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">bool</span> step = <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>*t; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(path[es[i].from] != INF &amp;&amp; path[es[i].to] &gt; path[es[i].from] + es[i].cost)</span><br><span class="line">			&#123;</span><br><span class="line">				step = <span class="literal">true</span>;</span><br><span class="line">				path[es[i].to] = path[es[i].from] + es[i].cost;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!step) <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n, t;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; t &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; t; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; es[i].from &gt;&gt; es[i].to &gt;&gt; es[i].cost;</span><br><span class="line">		es[i+t].from = es[i].to;</span><br><span class="line">		es[i+t].to = es[i].from;</span><br><span class="line">		es[i+t].cost = es[i].cost;</span><br><span class="line">	&#125;</span><br><span class="line">	short_path(t);</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; path[n] &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/12/POJ-2387%20Til%20the%20Cows%20Come%20Home/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-高精度乘法阶乘" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/09/%E9%AB%98%E7%B2%BE%E5%BA%A6%E4%B9%98%E6%B3%95%E9%98%B6%E4%B9%98/">高精度乘法</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/09/%E9%AB%98%E7%B2%BE%E5%BA%A6%E4%B9%98%E6%B3%95%E9%98%B6%E4%B9%98/" class="archive-article-date">
+  	<time datetime="2018-09-09T10:51:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本来不怎么会写，老师布置了一道求阶乘的作业，就实现了一波</p>
+<p>直接上高精度实现的阶乘代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">100000</span>];</span><br><span class="line"><span class="keyword">int</span> qrr[<span class="number">100000</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fac</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n &lt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"ERROR"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">memset</span>(arr, <span class="number">-1</span>, <span class="keyword">sizeof</span> arr);</span><br><span class="line">	arr[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> t = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> temp = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>; i &lt;= n; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> skip = t;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j &lt; skip; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			arr[j] *= i;</span><br><span class="line">			arr[j] += temp;</span><br><span class="line">			<span class="keyword">if</span>(arr[j] &gt;= <span class="number">10</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				temp = arr[j] / <span class="number">10</span>;</span><br><span class="line">				<span class="keyword">if</span>(arr[j + <span class="number">1</span>] == <span class="number">-1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					arr[j + <span class="number">1</span>] = temp;</span><br><span class="line">					++t;</span><br><span class="line">				&#125;</span><br><span class="line">				arr[j] %= <span class="number">10</span>;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			temp = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		temp = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=t<span class="number">-1</span>; i &gt;= <span class="number">0</span>; --i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; arr[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	fac(n); <span class="comment">//n 的阶乘</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述, 高精度乘法求阶乘</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/09/%E9%AB%98%E7%B2%BE%E5%BA%A6%E4%B9%98%E6%B3%95%E9%98%B6%E4%B9%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-分治算法&amp;归并排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/02/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95&%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">分治算法/ 归并排序</a>
+    </h1>
+  
+
+        
+        <a href="/2018/08/02/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95&%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2018-08-02T13:46:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>归并排序是采用的分治法的一个非常典型的应用，将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为二路归并。</p>
+<p>既然是排序，通俗来讲就是把数字序列变为有序状态，但是传统的排序方式，像冒泡排序啊，插入排序啊什么的，耗时太高，即使是快速排序，最坏的情况时间复杂度也到了O(n^2)，而归并排序，则比快排最好的情况O(n*log n)要好。</p>
+<p>比如我有两个有序数列，我怎么把他们合并起来并且排序好呢，直接合并再排序太麻烦了，我们可以这样；</p>
+<p>例如：<br>                                            arr1<code>1 3 5 7 9</code><br>                                             arr2<code>2 4 6 8 10</code><br> 两个有序数列，我们可以新建一个数组(qrr)，然后我们设两个指针分别指向两个数组的开头,通过比较大小把小的放到qrr里面，(当然如果想从大到小也行) ，上面两个数组 其中1 &lt; 2 ,把1放到qrr里面之后我们可以让arr1的指针后移，指向3  然后再比较3 和 2 的大小 ，这时2 &lt; 3， arr2的指针后移，不断进行下去，然后你就会发现qrr <code>1 2 3 4 5 6 7 8 9</code> arr1 已经走完了 ， arr2还有剩余，这时我们只需要把arr2剩余的添加的qrr里面就行了。<br>这样我们就实现了合并 + 排序， 时间复杂的为O(n)</p>
+<p>但是为什么说用到了分治的思想呢，我们知道，分治就是把一件大的事情，不断分解成许多小问题来解决,(其实类似递归对吧) ，如果合并这两个序列是无序的呢？ 事情就复杂了。这是分治就排上用场了，算法算法自然可以有很多变化，前面我们说了合并两个有序数列，这是一种应用，从归并排序分离出来的一些而已，如果我们要对一个数列排序的话，运用归并的思想应该怎么做呢？</p>
+<p>不妨这样想，我们可以把数列分成两个数列，但又有问题了，分成的两个数列仍然不是有序的怎么办，是不是想到了什么…  递归对吧，虽然分成的两个数列都不是有序的，但我们可以继续分下去，一直分到最后每个区间只剩一个元素，这样我们就可以认为他是有序的，(一个元素肯定是有序的) </p>
+<p>例如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 1 3 5 0 7 6 9</span><br></pre></td></tr></table></figure>
+<p>对应下标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0 1 2 3 4 5 6 7</span><br></pre></td></tr></table></figure>
+<p>这样一个无序数列，我们可以把他分成两半，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">左边: 2 1 3 5  右边: 0 7 6 9</span><br></pre></td></tr></table></figure>
+<p>然后不是有序的没关系  我们递归下去，继续分它，<br>一直分到每个区间都是一个元素的时候</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2	1	3	5	0	7	6	9</span><br></pre></td></tr></table></figure>
+<p>然后我们用刚开始的办法合并，<br>2 1 合并成一个区间<br>3 5 合并成一个区间<br>0 7合并成一个区间<br>6 9合并成一个区间</p>
+<p>然后4个区间合并成两个 </p>
+<p>两个最后合并成一个</p>
+<p>这样我们就完成了排序</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">int</span> qrr[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">memeryarray</span><span class="params">(<span class="keyword">int</span> first, <span class="keyword">int</span> mid, <span class="keyword">int</span> end,)</span><span class="comment">//分别对应开始，中间，末尾</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i=first, j=mid+<span class="number">1</span>, k=<span class="number">0</span>; <span class="comment">//对应下标</span></span><br><span class="line">	<span class="keyword">while</span>(i &lt;= mid &amp;&amp; j &lt;= end) <span class="comment">//分成的两个区间</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr[i] &gt; arr[j]) <span class="comment">//如果左边的区间下标为i的值 &gt; 右边区间下标为j的值</span></span><br><span class="line">		&#123;</span><br><span class="line">			qrr[k++]=arr[j++]; <span class="comment">//放到新的数组里面</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="comment">//如果左边的区间下标为i的值 &lt; 右边区间下标为j的值</span></span><br><span class="line">			qrr[k++]=arr[i++];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(i &lt;= mid) qrr[k++]=arr[i++]; </span><br><span class="line">	<span class="keyword">while</span>(j &lt;= end) qrr[k++]=arr[j++]; <span class="comment">//这两句分别代表某一个区间的值用完了，剩下的直接排在后面</span></span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; k; ++i)</span><br><span class="line">		arr[first+i] = qrr[i]; <span class="comment">//最后区间合并完再放回去</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergesort</span><span class="params">(<span class="keyword">int</span> first, <span class="keyword">int</span> end)</span> <span class="comment">//数组的开头和最后</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(first &lt; end) <span class="comment">//区分到最后区间内只剩一个值的话 就停止递归</span></span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">int</span> mid=(first + end)/<span class="number">2</span>; <span class="comment">//分成两个区间</span></span><br><span class="line">		mergesort(first,mid); <span class="comment">//左边</span></span><br><span class="line">		mergesort(mid+<span class="number">1</span>,end); <span class="comment">//右边</span></span><br><span class="line">		memeryarray(first,mid,end); <span class="comment">//区间合并</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>至此我们的归并排序就完成了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/08/02/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95&%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-快速幂" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -628,6 +956,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
