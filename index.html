@@ -145,94 +145,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-将windows搭建为代理服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/%E5%B0%86windows%E6%90%AD%E5%BB%BA%E4%B8%BA%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">将windows搭建为代理服务器</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/29/%E5%B0%86windows%E6%90%AD%E5%BB%BA%E4%B8%BA%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2019-10-29T13:05:25.901Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><ul>
-<li><p>审核不通过？</p>
-</li>
-<li><p>很久之前的一个想法，现在折腾出来了就不要辜负了， （还是作业太少， 或是我不知道有作业不怪我</p>
-</li>
-</ul>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>既然是将主机搭建为代理服务器，那么就是首先搭建服务端，</p>
-<ul>
-<li>电脑系统win10，windows服务端名字好像叫，libQtshadowsocks，qt库嘿嘿嘿，</li>
-<li>下载，自己网上找一下吧，找不到再评论，懒的上传了</li>
-<li>下载好后是一个名为shadowsocks-libqss.exe的可执行文件，</li>
-</ul>
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul>
-<li>开发者工具新建一个json文件，没有的话也可以txt然后改格式</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>:<span class="string">"localhost"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>:<span class="number">58888</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"password"</span>:<span class="string">"mimamima"</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>:<span class="number">600</span>,</span><br><span class="line">    <span class="attr">"method"</span>:<span class="string">"chacha20"</span>,</span><br><span class="line">    <span class="attr">"http_proxy"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"auth"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">58888是端口号，也可以改其他的，别忘记了开端口</span><br><span class="line">然后password自己设置密码，method是加密方式，这里采用chacha20</span><br><span class="line">写好后命名为config.json</span><br></pre></td></tr></table></figure>
-
-<h3 id="批处理以配置文件内容运行程序"><a href="#批处理以配置文件内容运行程序" class="headerlink" title="批处理以配置文件内容运行程序"></a>批处理以配置文件内容运行程序</h3><p>写个bat，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">Shadowsocks-libqss -c config.json -S</span><br><span class="line"></span><br><span class="line">第一行关闭回显，第二行运行程序</span><br></pre></td></tr></table></figure>
-
-<h3 id="然后运行bat文件"><a href="#然后运行bat文件" class="headerlink" title="然后运行bat文件"></a>然后运行bat文件</h3><p><img src="https://img-blog.csdnimg.cn/20190711194810298.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldGxvZ3M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>开始监听58888端口</p>
-<p>我们用客户端ss一下会发现<br><img src="https://img-blog.csdnimg.cn/20190711195015146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldGxvZ3M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>有日志，表明连接成功，这里记得终端信息别填错了，然后如果主机在局域网环境中的话，终端也要先连接到局域网，原因不多说了吧，当然主机公网ip当我没说</p>
-<p>这里不要关闭cmd窗口，关闭了程序也停了，<br>如果想隐藏的话，写个vbs</p>
-<figure class="highlight vbs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Set</span> ws = <span class="built_in">CreateObject</span>(<span class="string">"Wscript.Shell"</span>) </span><br><span class="line">   ws.run <span class="string">"cmd /c Shadowsocks-libqss -c config.json -S"</span>,vbhide</span><br></pre></td></tr></table></figure>
-<p>   直接运行vbs就可以隐藏掉窗口，想结束的话就任务管理器<br>   <img src="https://img-blog.csdnimg.cn/20190711195623907.png" alt="在这里插入图片描述"><br>然后想开机启动保持代理的话，<br>直接cmd shell:startup 丢进去就好了<br><img src="https://img-blog.csdnimg.cn/20190711195753333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldGxvZ3M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/%E5%B0%86windows%E6%90%AD%E5%BB%BA%E4%B8%BA%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -279,6 +191,109 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/29/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-将windows搭建为代理服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/16/%E5%B0%86windows%E6%90%AD%E5%BB%BA%E4%B8%BA%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">代理服务器</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/16/%E5%B0%86windows%E6%90%AD%E5%BB%BA%E4%B8%BA%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2019-07-16T07:09:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="初衷："><a href="#初衷：" class="headerlink" title="初衷："></a>初衷：</h1><ul>
+<li><p>审核不通过？</p>
+</li>
+<li><p>很久之前的一个想法，现在折腾出来了就不要辜负了， （还是作业太少， 或是我不知道有作业不怪我</p>
+</li>
+</ul>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>既然是将主机搭建为代理服务器，那么就是首先搭建服务端，我用的是基于ss服务的，其他的也有，但不会。</p>
+<ul>
+<li>电脑系统win10，windows服务端名字好像叫，libQtshadowsocks，qt库嘿嘿嘿，</li>
+<li>下载，自己网上找一下吧，找不到再评论，懒的上传了</li>
+<li>下载好后是一个名为shadowsocks-libqss.exe的可执行文件，</li>
+</ul>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><ul>
+<li>开发者工具新建一个json文件，没有的话也可以txt然后改格式</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>:<span class="string">"localhost"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>:<span class="number">58888</span>,</span><br><span class="line">    <span class="attr">"local_address"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</span><br><span class="line">    <span class="attr">"password"</span>:<span class="string">"mimamima"</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>:<span class="number">600</span>,</span><br><span class="line">    <span class="attr">"method"</span>:<span class="string">"chacha20"</span>,</span><br><span class="line">    <span class="attr">"http_proxy"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"auth"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">58888是端口号，也可以改其他的，别忘记了开端口</span><br><span class="line">然后password自己设置密码，method是加密方式，这里采用chacha20</span><br><span class="line">写好后命名为config.json</span><br></pre></td></tr></table></figure>
+
+<h3 id="批处理以配置文件内容运行程序"><a href="#批处理以配置文件内容运行程序" class="headerlink" title="批处理以配置文件内容运行程序"></a>批处理以配置文件内容运行程序</h3><p>写个bat，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">Shadowsocks-libqss -c config.json -S</span><br><span class="line"></span><br><span class="line">第一行关闭回显，第二行运行程序</span><br></pre></td></tr></table></figure>
+
+<h3 id="然后运行bat文件"><a href="#然后运行bat文件" class="headerlink" title="然后运行bat文件"></a>然后运行bat文件</h3><p><img src="https://img-blog.csdnimg.cn/20190711194810298.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldGxvZ3M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>开始监听58888端口</p>
+<p>我们用客户端ss一下会发现<br><img src="https://img-blog.csdnimg.cn/20190711195015146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldGxvZ3M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>有日志，表明连接成功，这里记得终端信息别填错了，然后如果主机在局域网环境中的话，终端也要先连接到局域网，原因不多说了吧，当然主机公网ip当我没说</p>
+<p>这里不要关闭cmd窗口，关闭了程序也停了，<br>如果想隐藏的话，写个vbs</p>
+<figure class="highlight vbs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Set</span> ws = <span class="built_in">CreateObject</span>(<span class="string">"Wscript.Shell"</span>) </span><br><span class="line">   ws.run <span class="string">"cmd /c Shadowsocks-libqss -c config.json -S"</span>,vbhide</span><br></pre></td></tr></table></figure>
+<p>   直接运行vbs就可以隐藏掉窗口，想结束的话就任务管理器<br>   <img src="https://img-blog.csdnimg.cn/20190711195623907.png" alt="在这里插入图片描述"><br>然后想开机启动保持代理的话，<br>直接cmd shell:startup 丢进去就好了<br><img src="https://img-blog.csdnimg.cn/20190711195753333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L25ldGxvZ3M=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">服务器</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">折腾</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/16/%E5%B0%86windows%E6%90%AD%E5%BB%BA%E4%B8%BA%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
         </p>
       
 
@@ -399,6 +414,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">折腾</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -460,7 +483,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;&lt;br&gt;岁月长，衣裳薄&lt;br&gt;</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">&lt;br&gt;&lt;br&gt;岁月长，衣裳薄&lt;br&gt;任何问题可以联系liarpzu@gmail.com</div>
   	  	
     	</section>
     
